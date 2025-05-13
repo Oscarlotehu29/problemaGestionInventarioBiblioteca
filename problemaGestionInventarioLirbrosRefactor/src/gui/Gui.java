@@ -33,6 +33,7 @@ public class Gui {
 				}
 				
 				case 5 -> libroControlador.agregar(entrada);
+				case 6 -> System.out.println("Saliendo de la aplicación. Vuelva pronto.");
 				default -> System.out.println("El número introducido corresponde a ninguna opción, vuelve a intentarlo.");
 			}
 			

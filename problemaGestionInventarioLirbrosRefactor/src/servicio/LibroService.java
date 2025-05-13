@@ -7,6 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import modelo.Libro;
@@ -47,5 +48,10 @@ public class LibroService {
 			System.out.println(e.toString());
 			
 		}
+	}
+	
+	public Map<String,Integer> filtroMenoresCincoStock(){
+		var libros = cargarLibros();
+		return libros.stream().filter(l -> l.getStock() < 5).collect(Collectors.toMap(Libro::getTitulo, Libro::getStock));
 	}
 }

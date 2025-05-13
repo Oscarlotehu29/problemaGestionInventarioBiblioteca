@@ -22,6 +22,12 @@ public class ReportesControlador {
 				ventaControlador.getVentaService()
 				.librosPorGenero(inventario.getLibroService().cargarLibros()).forEach((genero, cantidad) -> System.out.println("Genero: " + genero + " Cantidad: " + cantidad));
 			}
+			
+			case 4 -> {
+				inventario.getLibroService().filtroMenoresCincoStock().forEach((titulo, stock)-> {
+					System.out.println("Titulo: " + titulo + " Stock: "+ stock);
+				} );
+			}
 			}
 		} while (opcion != 5);
 	}

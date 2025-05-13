@@ -75,9 +75,4 @@ public class VentaService {
 		
 		return ventas;
 	}
-	
-//	public Double promedioPrecioLibros(List<Libro> inventario) {
-//		
-//	}
-	
 }
